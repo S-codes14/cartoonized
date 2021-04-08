@@ -12,3 +12,5 @@ Note: On heroku, apps tend to go asleep if there is no traffic in 1 hour. So, fi
 
 - <h3>Cartoonized</h3>
 <img src="./Screenshot from 2021-04-08 03-24-32.png" style="width: 500px; max-width: 100%; height: auto"/>
+
+## Note there is now download button, to down load the cartoonized image, right click on the image and save
