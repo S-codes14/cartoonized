@@ -1,0 +1,19 @@
+@import "../../variables";
+
+.ImageContainer {
+    padding: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(43rem, 1fr));
+    grid-gap: 2%;
+    font-size: $default-font-size;
+
+    @media only screen and (max-width: $bp-xsmall) {
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+}
+
+.Image {
+    justify-self: center;
+    height: 100%;
+}

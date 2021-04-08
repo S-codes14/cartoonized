@@ -1,0 +1,63 @@
+@import "../../../variables";
+
+.Button {
+    all: unset;
+    display: inline-block;
+    font-size: $default-font-size;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+    transition: all 0.4s ease-out;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0.4rem 0.8rem 0.5rem rgba($black, 0.15);
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0.2rem 0.4rem 0.4rem rgba($black, 0.15);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 3px;
+        top: 0;
+        left: 0;
+        background-color: $blue-variant-1;
+        z-index: -100;
+        transform-origin: left;
+        transform: scaleX(0);
+        transition: transform 0.2s, 
+                    width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+                    height 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+                    background-color 0.1s;
+    }
+
+    &:hover::before {
+        transform: scaleX(1);
+        width: 100%;
+    }
+}
+
+.ButtonPrimary {
+    color: $white;
+    background-color: $blue-variant-2;
+    
+    &:hover {
+        color: $blue-variant-2;
+    }
+}
+
+.ButtonSmall {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.ButtonMedium {
+    margin: 1rem;
+    padding: 1rem 2rem;
+}

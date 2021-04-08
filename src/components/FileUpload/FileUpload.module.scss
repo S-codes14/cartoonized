@@ -1,0 +1,39 @@
+@import "../../variables";
+
+.FileUpload {
+    align-self: end;
+}
+
+.FileUploadHeader {
+    text-align: center;
+    font-family: $fancy-font;
+    font-size: $header-font-size;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-xsmall) {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        display: inline-block;
+        color: $red;
+
+        @supports(background-clip: text) {
+            background-image: linear-gradient(to bottom right, $blue , $red);
+            background-clip: text;
+            color: transparent;
+        }
+    }
+}
+
+.Form {
+    text-align: center;
+
+    & > * {
+        &:first-child {
+            margin-bottom: 1.5rem;
+        }
+    }
+}

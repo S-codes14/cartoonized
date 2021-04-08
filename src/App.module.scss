@@ -1,0 +1,46 @@
+@import "./variables";
+
+.App {
+    height: 100vh;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10rem repeat(auto-fit, minmax(18rem, 1fr));
+    justify-content: space-between;
+    grid-gap: 3%;
+    
+    background-image: linear-gradient(to bottom right, rgba($blue-variant-1, 0.15), rgba($blue-variant-2, 0.15));
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: 8rem repeat(auto-fit, minmax(18rem, 1fr));
+    }
+}
+
+.AppHeader {
+    font-size: $page-header-font-size;
+    font-family: $fancy-font;
+    letter-spacing: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 5rem;
+        letter-spacing: normal;
+    }
+
+    @media only screen and (max-width: $bp-xsmall) {
+        font-size: 4.5rem;
+    }
+
+    h1 {
+        display: inline-block;
+        color: $red;
+
+        @supports(background-clip: text) {
+            background-image: linear-gradient(315deg, $green 0%, $blue 33%, $red 66%, $yellow 100%);
+            background-clip: text;
+            color: transparent;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@import "../../variables";
+
+.DropContainer {
+    width: 80%;
+    margin: 0 auto;
+    height: 15rem;
+    color: #aaa;
+    border: 3px dashed #aaa;
+    position: relative;
+    transition: all 0.2s ease-out;
+}
+
+.DropContainer > * {
+    padding: 1rem;
+}
+
+.DropContainerEnter {
+    color: #000;
+    background-color: #ddd;
+    border: 3px dashed #000;
+}
+
+.FileSelect {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.ContentText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: $default-font-size;
+    font-weight: 600;
+    color: inherit;
+
+    @media only screen and (max-width: $bp-xsmall) {
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+}
+
+.InvalidFileType {
+    color: $red;
+}
+
+.ValidFileType {
+    color: $green;
+}
