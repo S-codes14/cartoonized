@@ -68,6 +68,11 @@ const App = () => {
           <h1>Cartoonized</h1>
         </header>
         <ShowCase uploadedImage={uploadedImage} cartoonizedImage={showcase} loading={isLoading} />
+          <br/>
+          <a href={showcase} download="download" target='_blank'>
+            <Button >Download</Button>
+          </a>
+        <br/>
 
         <FileUpload cartoonizeImage={cartoonizeImageHandler} loading={(isLoading) => setIsLoading(isLoading)} error={onErrorOccuredHandler} />
         {/* <form onSubmit={onFormSubmitted}>
